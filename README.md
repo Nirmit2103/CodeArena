@@ -2,6 +2,8 @@
 
 A modern competitive programming platform where developers can showcase their coding skills, track their progress across multiple platforms, connect with teammates, and participate in tournaments.
 
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-success?style=for-the-badge)](https://code-arena-nirmit2103.vercel.app)
+
 ![CodeArena](https://img.shields.io/badge/React-18.3.1-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue)
 ![Vite](https://img.shields.io/badge/Vite-5.4.2-646CFF)
