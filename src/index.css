@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-text-primary: #1a1a1a;
+  --color-bg-primary: #ffffff;
+}
+
+.dark {
+  --color-text-primary: #ffffff;
+  --color-bg-primary: #0F0F13;
+}
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply bg-[#0A0A0B] text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text;
+  }
+
+  .glass-card {
+    @apply bg-[#1A1B1E]/80 backdrop-blur-lg rounded-xl border border-gray-800/50 shadow-xl;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg 
+           hover:from-indigo-600 hover:to-purple-600 transition-all duration-300
+           focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0A0A0B] focus:ring-indigo-500
+           font-medium;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-[#1A1B1E] text-gray-100 rounded-lg border border-gray-700
+           hover:bg-gray-800 transition-all duration-300
+           focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0A0A0B] focus:ring-gray-700
+           font-medium;
+  }
+
+  .input-field {
+    @apply block w-full rounded-lg border-gray-700 bg-[#1A1B1E] text-gray-100
+           focus:border-indigo-500 focus:ring-indigo-500
+           placeholder:text-gray-500 font-mono;
+  }
+
+  .card {
+    @apply bg-[#1A1B1E] rounded-xl shadow-xl p-6
+           hover:shadow-2xl transition-all duration-300
+           border border-gray-800;
+  }
+
+  .nav-link {
+    @apply flex items-center space-x-2 px-4 py-2 rounded-lg
+           text-gray-300 hover:text-white hover:bg-[#1A1B1E]
+           transition-all duration-200 font-medium;
+  }
+
+  .nav-link.active {
+    @apply bg-[#1A1B1E] text-white;
+  }
+
+  .code-font {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
